@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abednego Thuranira - CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      color: #333;
+    }
+    .cv-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 12px auto;
+      display: block;
+      object-fit: cover;
+    }
+    @media print {
+      .profile-pic, button {
+        display: none;
+      }
+    }
+    h1 {
+      color: darkblue;
+    }
+    h2 {
+      color: #444;
+      margin-top: 30px;
+    }
+    p, li {
+      line-height: 1.6;
+    }
+    a {
+      color: darkblue;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .links {
+      margin-top: 10px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: darkblue;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: darkblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: navy;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container" id="cv">
+    <h1>Abednego Thuranira Kaume</h1>
+    <p><strong>Email:</strong> abednegokaume@gmail.com</p>
+    <p><strong>Phone:</strong> 0742600965</p>
+    <p><strong>Location:</strong> Roysambu, Nairobi</p>
+    <div class="links">
+      <a href="https://github.com/Abednego254" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/kaume-abednego-937469362" target="_blank">LinkedIn</a>
+    </div>
+    <img src="https://i.postimg.cc/brt8bqh1/IMG-20230304-112319-3-2.jpg0" alt="Profile Picture" class="profile-pic">
+
+    <h2>Profile</h2>
+    <p>
+      I am a final-year Computer Science student at Laikipia University, passionate about software development and technology-driven problem-solving. 
+      I have hands-on experience in web development, backend programming, and database management. 
+      I am proficient in Python and have strong working knowledge of Java, Spring Boot, and React, which I gained during my internship. 
+      I am currently expanding my skills in mobile development and system integration with M-Pesa APIs.
+    </p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>Python</li>
+      <li>Java (Intermediate)</li>
+      <li>Spring Boot</li>
+      <li>React</li>
+      <li>Flutter (Mobile App Development)</li>
+      <li>Responsive Web Design</li>
+      <li>Database Management Systems</li>
+      <li>System Integration with M-Pesa APIs</li>
+    </ul>
+
+    <h2>Education</h2>
+    <p><strong>Laikipia University</strong><br>Bachelor of Science in Computer Science (Final Year - Lecturers currently on strike in Kenya)</p>
+    <p><strong>Kanjoo Mixed Day Secondary School</strong><br>KCSE - Graduated [2019]</p>
+    <p><strong>Nkiri NAC Academy</strong><br>KCPE - Graduated [2013]</p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Online Catalogue System</strong> – Developed during internship using Java Spring Boot and React.</li>
+      <li><strong>Kiswahili Teaching System</strong> – AI-assisted platform for teaching Kiswahili through interactive content.</li>
+      <li><strong>M-Pesa Payment App (In Progress)</strong> – A mobile/web app to help sellers manage M-Pesa transactions efficiently.</li>
+      <li><strong>BMI Calculator Mobile App</strong> – A cross-platform mobile application built with Flutter in Android Studio to calculate and display users’ BMI with an interactive UI.</li>
+      <li><strong>Lost and Found Items Tracking Tool</strong> – Offline web-based platform for reporting and recovering lost items.</li>
+      <li><strong>Brainspark</strong> – AI-powered academic assistant (Offline).</li>
+      <li><strong>Smart BMI Device</strong> – Under development; automates BMI calculation and displays results instantly.</li>
+      <li><a href="https://samcafe-ce959.web.app/" target="_blank">SamCafe Website (Live)</a></li>
+      <li><a href="https://rental-app-n5dp.onrender.com/tenant/login" target="_blank">Tenant Login Page (Rental App - Live on Render)</a></li>
+      <li><a href="https://rental-app-n5dp.onrender.com" target="_blank">Admin Login Page (Rental App - Live on Render)</a></li>
+    </ul>
+
+    <h2>Work & Volunteering Experience</h2>
+    <ul>
+      <li><strong>Software Development Intern</strong> – Systech Limited (May–August 2025)  
+        <br>Learned and applied Java, Spring Boot, and React to build the Online Catalogue System.</li>
+      <li>Health Week Volunteer – Laikipia University (Triage Section) – Developed BMI calculator using Python.</li>
+      <li>Waiter at Kwa Sam Cafe – Assisted operations while developing their business website.</li>
+    </ul>
+
+    <h2>Certifications & Awards</h2>
+    <ul>
+      <li>Huawei Certification – Completed ICT course at Laikipia University</li>
+      <li>Best in Computer Studies – Kanjoo Secondary School</li>
+      <li>Best Student – Nkiri NAC Academy</li>
+    </ul>
+
+    <h2>References</h2>
+    <p>Available upon request</p>
+  </div>
+
+  <button id="download">Download CV as PDF</button>
+  <p id="status" style="margin-top: 10px; color: green;"></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById("download").addEventListener("click", () => {
+      const status = document.getElementById("status");
+      status.textContent = "Downloading...";
+
+      const element = document.getElementById("cv");
+      html2pdf()
+        .from(element)
+        .save("Abednego_Thuranira_CV.pdf")
+        .then(() => {
+          status.textContent = "Download complete!";
+        })
+        .catch(() => {
+          status.textContent = "Download failed. Please try again.";
+          status.style.color = "red";
+        });
+    });
+  </script>
+</body>
+</html>
+
